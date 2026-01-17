@@ -15,7 +15,7 @@ const Navbar: React.FC = () => {
         <span className="font-black tracking-tighter text-black text-base sm:text-lg">BROZ.dev</span>
       </div>
       <button className="bg-black text-white px-5 sm:px-6 py-2 sm:py-2.5 rounded-full font-black text-xs sm:text-sm hover:bg-gray-900 transition-all hover:scale-105 active:scale-95 shadow-md border border-black/10 whitespace-nowrap">
-        Book a call
+        Contact
       </button>
     </nav>
   );
