@@ -56,12 +56,18 @@ const projects = [
 
 const SelectedWork: React.FC = () => {
   return (
-    <section className="scroll-reveal bg-white rounded-[2.5rem] sm:rounded-[3.5rem] p-6 sm:p-12 lg:px-16 lg:py-16 overflow-visible">
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 relative items-start">
-        {/* Left Column - Reduced font size and width to prevent overlap */}
-        <div className="lg:col-span-3 flex flex-col items-start gap-4 lg:sticky lg:top-40 h-fit pt-0">
+    <section className="scroll-reveal bg-white rounded-[2.5rem] sm:rounded-[3.5rem] p-6 sm:p-12 lg:px-16 lg:py-20 overflow-visible">
+      {/* 
+        Tailwind 10-column grid to achieve the 2/5 and 3/5 split.
+        lg:col-span-4 (2/5 of 10) for Title 
+        lg:col-span-6 (3/5 of 10) for Cards
+      */}
+      <div className="grid grid-cols-1 lg:grid-cols-10 gap-8 lg:gap-16 relative items-start">
+        
+        {/* Left Column - Title Part (Takes 2/5 of the grid space) */}
+        <div className="lg:col-span-4 flex flex-col items-start gap-4 lg:sticky lg:top-40 h-fit pt-0 pr-4">
           <div className="max-w-full">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#1a1a1a] leading-[0.95] tracking-tighter mb-4">
+            <h2 className="text-4xl sm:text-6xl lg:text-7xl font-black text-[#1a1a1a] leading-[0.9] tracking-tighter mb-4">
               Achievements
             </h2>
             <p className="text-black font-bold text-sm sm:text-base leading-snug opacity-70">
@@ -70,8 +76,8 @@ const SelectedWork: React.FC = () => {
           </div>
         </div>
 
-        {/* Right Column - Increased span to give title more room */}
-        <div className="lg:col-span-9 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12">
+        {/* Right Column - Cards Part (Takes 3/5 of the grid space) */}
+        <div className="lg:col-span-6 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12">
           {projects.map((project) => (
             <div 
               key={project.id} 
