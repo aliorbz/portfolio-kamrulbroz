@@ -3,22 +3,23 @@ import React from 'react';
 
 const experiences = [
   {
-    company: 'GOOGLE',
-    role: 'Full-time UI designer at Google',
-    years: '2020-Present',
-    icon: 'https://www.google.com/s2/favicons?domain=google.com&sz=64'
+    company: 'DISCORD',
+    role: 'Top role holder at several DC server',
+    years: '',
+    icon: 'https://www.google.com/s2/favicons?domain=discord.com&sz=64'
   },
   {
-    company: 'GRAMMARLY',
-    role: 'Lead Product Designer',
-    years: '2018-2020',
-    icon: 'https://www.google.com/s2/favicons?domain=grammarly.com&sz=64'
+    company: 'X',
+    role: 'Host/Co-host on Regional X spaces',
+    years: '',
+    // Using a specific vector-style favicon for X that works better in circles
+    icon: 'https://www.google.com/s2/favicons?domain=twitter.com&sz=64'
   },
   {
-    company: 'AIRBNB',
-    role: 'Senior UI/UX Consultant',
-    years: '2016-2018',
-    icon: 'https://www.google.com/s2/favicons?domain=airbnb.com&sz=64'
+    company: 'COMMUNITY',
+    role: 'Emphasizes overall Ecosystem work',
+    years: '',
+    icon: 'https://cdn-icons-png.flaticon.com/128/9985/9985721.png'
   }
 ];
 
@@ -32,7 +33,7 @@ const Experience: React.FC = () => {
           </h2>
           <div className="mt-12">
             <p className="text-black font-bold text-[16px] sm:text-[18px] max-w-[260px] leading-snug mb-8">
-              A decade of crafting digital experiences for world-class companies.
+              Years of crafting digital experiences for world-class projects.
             </p>
             <button className="bg-[#1a1a1a] text-white px-9 py-4 rounded-full font-bold text-sm hover:scale-105 transition-transform active:scale-95 shadow-sm">
               Download CV
@@ -43,11 +44,11 @@ const Experience: React.FC = () => {
         <div className="lg:col-span-7 flex flex-col gap-4">
           {experiences.map((exp, idx) => (
             <div key={idx} className="bento-card p-7 sm:p-9 flex items-center gap-6 group transition-all flex-1">
-              <div className="w-16 h-16 rounded-2xl overflow-hidden bg-[#f9fafb] flex-shrink-0 flex items-center justify-center p-3 border border-gray-100 group-hover:bg-white group-hover:shadow-sm transition-all shadow-sm">
+              <div className="w-16 h-16 rounded-full overflow-hidden bg-[#f9fafb] flex-shrink-0 flex items-center justify-center p-3.5 border border-gray-100 group-hover:bg-white group-hover:shadow-sm transition-all shadow-sm">
                 <img 
                   src={exp.icon} 
                   alt={exp.company} 
-                  className="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all opacity-80 group-hover:opacity-100" 
+                  className="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all opacity-80 group-hover:opacity-100 rounded-full" 
                 />
               </div>
               <div className="flex-1">
@@ -55,9 +56,6 @@ const Experience: React.FC = () => {
                   <h3 className="text-black font-black text-[11px] uppercase tracking-[0.12em] font-sans">
                     {exp.company}
                   </h3>
-                  {idx === 0 && (
-                    <span className="text-black/40 font-bold text-[11px] tracking-tight">2020-Present</span>
-                  )}
                 </div>
                 <h4 className="text-xl sm:text-2xl font-black tracking-tight text-[#1a1a1a] leading-tight">
                   {exp.role}

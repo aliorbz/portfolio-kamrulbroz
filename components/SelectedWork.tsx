@@ -56,7 +56,7 @@ const projects = [
 
 const SelectedWork: React.FC = () => {
   return (
-    <section className="scroll-reveal bg-white rounded-[2.5rem] sm:rounded-[3.5rem] p-6 sm:p-12 lg:px-16 lg:py-20 overflow-visible">
+    <section className="scroll-reveal bg-[#fdfaf5] rounded-[2.5rem] sm:rounded-[3.5rem] p-6 sm:p-12 lg:px-16 lg:py-20 overflow-visible shadow-sm">
       {/* 
         Tailwind 10-column grid to achieve the 2/5 and 3/5 split.
         lg:col-span-4 (2/5 of 10) for Title 
@@ -88,7 +88,7 @@ const SelectedWork: React.FC = () => {
                   href={project.link} 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden mb-6 bg-[#f5f5f5] aspect-[16/10] relative border border-gray-100 block"
+                  className="rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden mb-6 bg-white aspect-[16/10] relative border border-gray-100 block shadow-sm"
                 >
                   <img 
                     src={project.image} 
@@ -98,7 +98,7 @@ const SelectedWork: React.FC = () => {
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-500" />
                 </a>
               ) : (
-                <div className="rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden mb-6 bg-[#f5f5f5] aspect-[16/10] relative border border-gray-100">
+                <div className="rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden mb-6 bg-white aspect-[16/10] relative border border-gray-100 shadow-sm">
                   <img 
                     src={project.image} 
                     alt={project.title}
@@ -121,7 +121,7 @@ const SelectedWork: React.FC = () => {
                 {project.tags.map((tag) => (
                   <span 
                     key={tag.name} 
-                    className={`${tag.color} px-4 py-2 rounded-full text-[9px] sm:text-[10px] font-black tracking-widest leading-none`}
+                    className={`${tag.color} px-4 py-2 rounded-full text-[9px] sm:text-[10px] font-black tracking-widest leading-none shadow-sm`}
                   >
                     {tag.name}
                   </span>

@@ -17,38 +17,56 @@ const Footer: React.FC = () => {
           </div>
         </div>
         
-        <div className="lg:col-span-6 bg-[#2D9B9B] rounded-[2.5rem] sm:rounded-[3rem] p-10 sm:p-16 flex flex-col items-center justify-center relative overflow-hidden min-h-[400px]">
+        <div className="lg:col-span-6 bg-[#ff4e46] rounded-[2.5rem] sm:rounded-[3rem] p-10 sm:p-16 flex flex-col items-center justify-center relative overflow-hidden min-h-[400px]">
           <div className="flex flex-wrap justify-center gap-3 sm:gap-4 max-w-xl relative z-10">
             {[
-              { text: 'FOLLOW ME!', classes: 'bg-white/10 text-white border border-white/20' },
-              { text: 'INSTAGRAM', classes: 'bg-white text-[#2D9B9B] rotate-[-6deg]' },
-              { text: 'DRIBBBLE', classes: 'bg-white/20 text-white border border-white/20 rotate-[4deg]' },
-              { text: 'BEHANCE', classes: 'bg-[#1a1a1a] text-white rotate-[-3deg]' },
-              { text: 'LINKEDIN', classes: 'bg-white text-[#2D9B9B] rotate-[8deg]' },
-              { text: 'Dribbble 🤩', classes: 'bg-white/20 text-white border border-white/20' },
+              { text: 'FOLLOW ME!', classes: 'bg-black text-white border border-black rotate-[2deg]' },
+              { text: 'INSTAGRAM', classes: 'bg-white text-black rotate-[-6deg]' },
+              { text: 'COMMUNITY', classes: 'bg-black text-white rotate-[4deg]' },
+              { text: 'TELEGRAM', classes: 'bg-white text-black rotate-[-3deg]' },
+              { text: 'LINKEDIN', classes: 'bg-black text-white rotate-[8deg]' },
+              { text: 'DISCORD', classes: 'bg-white text-black rotate-[-2deg]' },
             ].map((bubble, i) => (
               <div 
                 key={i} 
-                className={`px-6 sm:px-8 py-3 sm:py-4 rounded-full text-lg sm:text-xl font-black cursor-pointer hover:scale-110 hover:shadow-xl transition-all shadow-md ${bubble.classes}`}
+                className={`px-6 sm:px-8 py-3 sm:py-4 rounded-full text-lg sm:text-xl font-black cursor-pointer hover:scale-110 hover:shadow-2xl transition-all shadow-md ${bubble.classes}`}
               >
                 {bubble.text}
               </div>
             ))}
           </div>
-          {/* Decorative element */}
-          <div className="absolute inset-0 bg-white/5 pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%)' }}></div>
+          <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(0,0,0,0.05) 0%, transparent 70%)' }}></div>
         </div>
       </div>
       
-      <div className="bento-card flex flex-col md:flex-row items-center justify-between px-8 sm:px-12 py-6 gap-6">
-        <div className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-full border-4 border-gray-900 flex items-center justify-center font-black text-xs">A</div>
-          <span className="font-black tracking-tighter text-gray-800 text-sm">BROZ.dev</span>
+      <div className="rounded-[2rem] bg-[#323232] flex flex-col md:flex-row items-center justify-between px-8 sm:px-12 py-6 gap-6 shadow-xl">
+        <div className="flex items-center gap-3">
+          <div className="w-10 h-10 overflow-hidden flex items-center justify-center">
+            <img 
+              src="https://i.ibb.co.com/4RrTrG5j/Picsart-26-01-19-16-24-22-721.png" 
+              alt="Logo" 
+              className="w-full h-full object-contain"
+            />
+          </div>
+          <span className="font-black tracking-tighter text-[#ff4e46] text-sm sm:text-base">
+            a product of{' '}
+            <a 
+              href="https://x.com/alphabrozdao" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="underline decoration-2 underline-offset-4 hover:opacity-80 transition-opacity"
+              title="https://x.com/alphabrozdao"
+            >
+              ALPHABROZ
+            </a>
+          </span>
         </div>
-        <div className="text-gray-400 font-bold text-sm tracking-widest uppercase text-center">© HEAVENLY DESIGN 2026</div>
+        <div className="text-[#ff4e46]/60 font-black text-[10px] sm:text-xs tracking-[0.2em] uppercase text-center">
+          © HEAVENLY DESIGN 2026
+        </div>
         <div className="flex gap-8">
-           <a href="#" className="text-gray-400 hover:text-black font-bold text-xs uppercase transition-colors">Privacy</a>
-           <a href="#" className="text-gray-400 hover:text-black font-bold text-xs uppercase transition-colors">Terms</a>
+           <a href="#" className="text-[#ff4e46] hover:text-white font-black text-[10px] sm:text-xs uppercase transition-colors tracking-widest">Privacy</a>
+           <a href="#" className="text-[#ff4e46] hover:text-white font-black text-[10px] sm:text-xs uppercase transition-colors tracking-widest">Terms</a>
         </div>
       </div>
     </footer>
