@@ -57,17 +57,12 @@ const projects = [
 const SelectedWork: React.FC = () => {
   return (
     <section className="scroll-reveal bg-[#fdfaf5] rounded-[2.5rem] sm:rounded-[3.5rem] p-6 sm:p-12 lg:px-16 lg:py-20 overflow-visible shadow-sm">
-      {/* 
-        Tailwind 10-column grid to achieve the 2/5 and 3/5 split.
-        lg:col-span-4 (2/5 of 10) for Title 
-        lg:col-span-6 (3/5 of 10) for Cards
-      */}
       <div className="grid grid-cols-1 lg:grid-cols-10 gap-8 lg:gap-16 relative items-start">
         
         {/* Left Column - Title Part (Takes 2/5 of the grid space) */}
         <div className="lg:col-span-4 flex flex-col items-start gap-4 lg:sticky lg:top-40 h-fit pt-0 pr-4">
           <div className="max-w-full">
-            <h2 className="text-4xl sm:text-6xl lg:text-7xl font-black text-[#1a1a1a] leading-[0.9] tracking-tighter mb-4">
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-[#1a1a1a] leading-[0.95] tracking-tighter mb-4">
               Achievements
             </h2>
             <p className="text-black font-bold text-sm sm:text-base leading-snug opacity-70">
